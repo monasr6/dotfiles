@@ -23,7 +23,7 @@ bash ~/dotfiles/install.sh
 
 # 3. Create your secrets file (NOT tracked by git)
 cat > ~/.zsh_secrets << 'EOF'
-export GITHUB_TOKEN="your_token_here"
+export TEST="test"
 EOF
 chmod 600 ~/.zsh_secrets
 
@@ -31,14 +31,16 @@ chmod 600 ~/.zsh_secrets
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # 5. Install plugins
-git clone https://github.com/zsh-users/zsh-autosuggestions       ~/.zsh/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting    ~/.zsh/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-history-substring-search ~/.zsh/zsh-history-substring-search
+git clone https://github.com/zsh-users/zsh-autosuggestions          ~/.zsh/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting       ~/.zsh/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-history-substring-search  ~/.zsh/zsh-history-substring-search
+git clone https://github.com/zsh-users/zsh-completions               ~/.zsh/zsh-completions
 
 # 6. Symlink plugins into OMZ
 ln -sf ~/.zsh/zsh-autosuggestions          ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 ln -sf ~/.zsh/zsh-syntax-highlighting      ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 ln -sf ~/.zsh/zsh-history-substring-search ~/.oh-my-zsh/custom/plugins/history-substring-search
+ln -sf ~/.zsh/zsh-completions              ~/.oh-my-zsh/custom/plugins/zsh-completions
 
 # 7. Install tools
 sudo apt install -y fzf lsd ranger
@@ -47,17 +49,6 @@ sudo tar -C /usr/local -xzf nvim-linux-x86_64.tar.gz
 sudo ln -sf /usr/local/nvim-linux-x86_64/bin/nvim /usr/local/bin/nvim
 ```
 
-## 🔐 Secrets
-
-Create `~/.zsh_secrets` manually:
-
-```bash
-# add tokens here
-```
-
-```bash
-chmod 600 ~/.zsh_secrets
-```
 
 ## ⚙️ Adding new files
 

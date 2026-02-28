@@ -36,8 +36,8 @@ ZSH_DISABLE_COMPFIX="true"
 
 # =============================================================================
 # Oh My Zsh Plugins
-# (zsh-autosuggestions, zsh-syntax-highlighting, history-substring-search
-#  are symlinked from ~/.zsh/ into ~/.oh-my-zsh/custom/plugins/)
+# (zsh-autosuggestions, zsh-syntax-highlighting, history-substring-search,
+#  and zsh-completions are symlinked from ~/.zsh/ into ~/.oh-my-zsh/custom/plugins/)
 # =============================================================================
 plugins=(
   git
@@ -45,6 +45,7 @@ plugins=(
   kubectl
   zsh-autosuggestions
   zsh-syntax-highlighting
+  zsh-completions
   history-substring-search
 )
 
