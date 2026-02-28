@@ -1,0 +1,48 @@
+# ============================================================
+# NEVER commit these — they contain secrets or are machine-local
+# ============================================================
+
+# Secrets file (tokens, passwords, API keys)
+.zsh_secrets
+*.secrets
+*.secret
+
+# Work/company-specific aliases (infra hostnames, internal URLs, auth tokens)
+.zsh_work
+
+# Shell history
+.zsh_history
+.bash_history
+
+# Zsh compiled/cache files
+.zcompdump*
+.zcompdump
+
+# SSH keys
+.ssh/id_*
+.ssh/known_hosts
+.ssh/*.pem
+.ssh/*.key
+
+# GPG
+.gnupg/
+
+# Swap/temp files
+*.swp
+*.swo
+*~
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Editor state
+.viminfo
+.lesshst
