@@ -47,13 +47,12 @@ sudo tar -C /usr/local -xzf nvim-linux-x86_64.tar.gz
 sudo ln -sf /usr/local/nvim-linux-x86_64/bin/nvim /usr/local/bin/nvim
 ```
 
-## 🔐 Secrets (never committed)
+## 🔐 Secrets
 
-Create `~/.zsh_secrets` manually on each machine:
+Create `~/.zsh_secrets` manually:
 
 ```bash
-export GITHUB_TOKEN="ghp_..."
-# add more tokens here
+# add tokens here
 ```
 
 ```bash
