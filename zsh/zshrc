@@ -120,6 +120,7 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 # NVM — lazy-loaded for fast shell startup (~300ms saved)
 # =============================================================================
 export NVM_DIR="$HOME/.nvm"
+export DOCKER_API_VERSION=1.45
 # Only load nvm when first called (nvm, node, npm, npx)
 nvm() {
   unfunction nvm node npm npx 2>/dev/null
@@ -241,3 +242,21 @@ port() { ss -tulnp | grep ":$1"; }
 # Powerlevel10k — must stay at the bottom
 # =============================================================================
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+
+# ---------------------------------------------------------------------------------------------------------------------
+# TRU Shell Customizations:
+# -------------------------
+export DOCKER_BUILDKIT=1
+if [ -d ~/.bash_aliases.d ]; then
+  for f in ~/.bash_aliases.d/*; do [ -f "$f" ] && . "$f"; done
+fi
+# ---------------------------------------------------------------------------------------------------------------------
+
+# opencode
+export PATH=/home/ctrl/.opencode/bin:$PATH
+
+# Claude Code ACP agent in Zed: the SDK's platform binary (@anthropic-ai/
+# claude-agent-sdk-linux-x64) isn't installed, so point it at the native install.
+export CLAUDE_CODE_EXECUTABLE="$HOME/.local/bin/claude"

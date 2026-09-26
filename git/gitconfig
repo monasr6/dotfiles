@@ -1,3 +1,14 @@
 [user]
 	name = Mohamed Nasr
 	email = mohamed.nasr@trufinance.app
+[safe]
+	directory = /testbed
+	directory = /testbed
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[diff]
+	algorithm = histogram
